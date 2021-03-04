@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1124</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="startCamPushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>470</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Connect Live Viewer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stopCamPushButton">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>470</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Disconnect Live Viewer</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>420</width>
+     <height>420</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="liveCameraViewerLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Live Camera Viewer</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>60</y>
+     <width>16</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>s</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="intensitySpinBox">
+   <property name="geometry">
+    <rect>
+     <x>789</x>
+     <y>140</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>380</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Range To Duplicate: Last</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>520</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Configuration</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="dupBlocksLastText">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>380</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addBlockPB">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>190</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="addTimeSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>918</x>
+     <y>60</y>
+     <width>91</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <double>10000.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="programList">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>40</y>
+     <width>321</width>
+     <height>421</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>300</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Block To Duplicate</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>60</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Block Duration</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="dupBlockText">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>300</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="addGreenRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>100</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Green (3)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>560</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Baud</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="arduinoBaudText">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>560</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>260</y>
+     <width>301</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add Duplicate Block(s)</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="addRedRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>100</y>
+     <width>71</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Red (2)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="runPB">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>510</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="blockLabel">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>0</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add New Block</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="noLightRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>100</y>
+     <width>115</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No Light (1)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteBlockPB">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>470</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete Row</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>340</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Range To Duplicate: First</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addDupBlocksPB">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>420</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>130</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>/100 Intensity</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>0</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Program</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="dupBlocksFirstText">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>340</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="arduinoCommText">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>560</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>560</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>COMM</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>540</y>
+     <width>721</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>280</y>
+     <width>331</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pickSavePushButton">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>560</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save Directory</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="savePathLabel">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>590</y>
+     <width>231</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveProgramPB">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>470</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loadProgramPB">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>470</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>30</y>
+     <width>331</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>570</y>
+     <width>311</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="resolutionComboBox">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>560</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="currentText">
+    <string>30 fps @ 400x400</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>30 fps @ 400x400</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 480x480</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 560x560</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 640x640</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 720x720</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 800x800</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 880x880</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 960x960</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 1040x1040</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 1120x1120</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 1200x1200</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30 fps @ 1280x1280</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 400x400</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 480x480</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 560x560</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 640x640</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 720x720</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 800x800</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 880x880</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 960x960</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 1040x1040</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 1120x1120</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 1200x1200</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>42 fps @ 1280x1280</string>
+    </property>
+   </item>
+  </widget>
+  <zorder>startCamPushButton</zorder>
+  <zorder>stopCamPushButton</zorder>
+  <zorder>frame</zorder>
+  <zorder>liveCameraViewerLabel</zorder>
+  <zorder>label_3</zorder>
+  <zorder>intensitySpinBox</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_13</zorder>
+  <zorder>dupBlocksLastText</zorder>
+  <zorder>addBlockPB</zorder>
+  <zorder>addTimeSpinBox</zorder>
+  <zorder>programList</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label_2</zorder>
+  <zorder>dupBlockText</zorder>
+  <zorder>addGreenRadioButton</zorder>
+  <zorder>label_16</zorder>
+  <zorder>arduinoBaudText</zorder>
+  <zorder>addRedRadioButton</zorder>
+  <zorder>runPB</zorder>
+  <zorder>blockLabel</zorder>
+  <zorder>noLightRadioButton</zorder>
+  <zorder>deleteBlockPB</zorder>
+  <zorder>label_10</zorder>
+  <zorder>addDupBlocksPB</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_6</zorder>
+  <zorder>dupBlocksFirstText</zorder>
+  <zorder>arduinoCommText</zorder>
+  <zorder>label_14</zorder>
+  <zorder>label_8</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>pickSavePushButton</zorder>
+  <zorder>savePathLabel</zorder>
+  <zorder>saveProgramPB</zorder>
+  <zorder>loadProgramPB</zorder>
+  <zorder>line_3</zorder>
+  <zorder>progressBar</zorder>
+  <zorder>resolutionComboBox</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
